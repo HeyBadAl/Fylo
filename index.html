@@ -15,13 +15,13 @@
     <script>
       // https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
       if (
-        localStorage.getItem('color-theme') === 'dark' ||
-        (!('color-theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
-        document.documentElement.classList.add('dark')
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.remove("dark");
       }
     </script>
     <script src="js/script.js" defer></script>
@@ -34,14 +34,19 @@
         class="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10"
       ></div>
       <!-- Menu -->
-      <div class="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10">
+      <div
+        class="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10"
+      >
         <a href="#features" class="hover:text-accentCyan">Features</a>
         <a href="#testimonials" class="hover:text-accentCyan">Testimonial</a>
 
         <!-- Dark/Light Button -->
-        <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-700 rounded-lg text-sm p-25">
-            <!-- Dark Svg Icon -->
-            <svg
+        <button
+          id="theme-toggle"
+          class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-700 rounded-lg text-sm p-25"
+        >
+          <!-- Dark Svg Icon -->
+          <svg
             id="theme-toggle-dark-icon"
             class="w-5 h-5 hidden"
             fill="currentColor"
@@ -68,5 +73,30 @@
           </svg>
         </button>
       </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg contain bg-bottom"
+    >
+      <!-- Hero Container -->
+      <div class="container mx-auto px-6 text-center md:pt-20 pb-52">
+        <img src="images/illustration-intro.png" alt="" class="mx-auto" />
+        <h1
+          class="max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl"
+        >
+          All your files in one secure location, assessable anywhere.
+        </h1>
+        <p class="max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg">
+          Fylo stores all your important files in one secure location. Access
+          them whenever you need, share and collaborate with friends, family and
+          co-workers.
+        </p>
+        <button class="p-3 rounded-full w-52 bg-accentCyan hover:scale-95">
+          Get Started
+        </button>
+      </div>
+    </section>
   </body>
 </html>
